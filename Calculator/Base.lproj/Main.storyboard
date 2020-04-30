@@ -67,34 +67,37 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="K1o-ti-nxK" userLabel="Perent Stack View">
                                                 <rect key="frame" x="20" y="150" width="374" height="614"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="f7W-Co-zgL">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="f7W-Co-zgL">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="116.5"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZP-M2-R4y">
-                                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="116.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="183" height="116.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                                                 <state key="normal" title="AC"/>
                                                                 <connections>
                                                                     <action selector="clearEqualsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lDM-au-u2X"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6h-vP-eRF">
-                                                                <rect key="frame" x="127.5" y="0.0" width="119" height="116.5"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
-                                                                <state key="normal" title="="/>
-                                                                <connections>
-                                                                    <action selector="equalsToo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1rx-9k-RaD"/>
-                                                                </connections>
-                                                            </button>
                                                             <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Uh-TF-RSj">
-                                                                <rect key="frame" x="254.5" y="0.0" width="119.5" height="116.5"/>
+                                                                <rect key="frame" x="191" y="0.0" width="87.5" height="116.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
-                                                                <state key="normal" title="+/_"/>
+                                                                <state key="normal" title="+/-"/>
                                                                 <connections>
                                                                     <action selector="plusMinusBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WEi-A0-rDH"/>
                                                                 </connections>
                                                             </button>
+                                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sjf-0B-ivU">
+                                                                <rect key="frame" x="286.5" y="0.0" width="87.5" height="116.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                                                <state key="normal" title="/"/>
+                                                                <connections>
+                                                                    <action selector="operationPerformed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ycy-yo-cpy"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="7Uh-TF-RSj" firstAttribute="width" secondItem="Sjf-0B-ivU" secondAttribute="width" id="T3O-oH-v9B"/>
+                                                        </constraints>
                                                         <viewLayoutGuide key="safeArea" id="nVa-tC-GFU"/>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="riw-nW-yzW">
@@ -219,33 +222,36 @@
                                                                     <action selector="numberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xvb-TQ-uYJ"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zi-as-Nyk">
-                                                                <rect key="frame" x="95.5" y="0.0" width="87.5" height="116.5"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
-                                                                <state key="normal" title="."/>
-                                                                <connections>
-                                                                    <action selector="dotPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rg2-mz-O13"/>
-                                                                </connections>
-                                                            </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQo-YP-bYi">
-                                                                <rect key="frame" x="191" y="0.0" width="87.5" height="116.5"/>
+                                                                <rect key="frame" x="95.5" y="0.0" width="87.5" height="116.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
                                                                 <state key="normal" title="x"/>
                                                                 <connections>
                                                                     <action selector="cancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bIy-OR-8wm"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sjf-0B-ivU">
+                                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zi-as-Nyk">
+                                                                <rect key="frame" x="191" y="0.0" width="87.5" height="116.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                                                <state key="normal" title="."/>
+                                                                <connections>
+                                                                    <action selector="dotPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rg2-mz-O13"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6h-vP-eRF">
                                                                 <rect key="frame" x="286.5" y="0.0" width="87.5" height="116.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
-                                                                <state key="normal" title="/"/>
+                                                                <state key="normal" title="="/>
                                                                 <connections>
-                                                                    <action selector="operationPerformed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ycy-yo-cpy"/>
+                                                                    <action selector="equalsToo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1rx-9k-RaD"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Sjf-0B-ivU" firstAttribute="width" secondItem="oKm-8N-a0y" secondAttribute="width" id="G8m-wT-jma"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <constraints>
@@ -290,7 +296,6 @@
                         <outlet property="parentSatckView" destination="K1o-ti-nxK" id="VI1-Je-mfR"/>
                         <outletCollection property="numberBtns" destination="3RE-lf-cnM" collectionClass="NSMutableArray" id="TvE-bT-rh8"/>
                         <outletCollection property="numberBtns" destination="3Zi-as-Nyk" collectionClass="NSMutableArray" id="yTA-aG-t2k"/>
-                        <outletCollection property="numberBtns" destination="aQo-YP-bYi" collectionClass="NSMutableArray" id="kv5-H3-1NU"/>
                         <outletCollection property="numberBtns" destination="3FV-Bo-bxi" collectionClass="NSMutableArray" id="Wnf-wa-qVD"/>
                         <outletCollection property="numberBtns" destination="pe9-ib-dXu" collectionClass="NSMutableArray" id="YB1-ZK-Lhv"/>
                         <outletCollection property="numberBtns" destination="c3n-vG-hXK" collectionClass="NSMutableArray" id="OKV-jy-SLe"/>
@@ -305,8 +310,9 @@
                         <outletCollection property="operationBtn" destination="5aw-Rr-khk" collectionClass="NSMutableArray" id="mPU-fd-vWd"/>
                         <outletCollection property="operationBtn" destination="aLQ-T7-fj7" collectionClass="NSMutableArray" id="JGy-vK-QTC"/>
                         <outletCollection property="operationBtn" destination="oxq-kp-eeA" collectionClass="NSMutableArray" id="Z7R-Qb-4Ii"/>
-                        <outletCollection property="clearEqualButton" destination="l6h-vP-eRF" collectionClass="NSMutableArray" id="uxy-Km-kjF"/>
                         <outletCollection property="operationBtn" destination="Sjf-0B-ivU" collectionClass="NSMutableArray" id="kYT-1l-otS"/>
+                        <outletCollection property="clearEqualButton" destination="l6h-vP-eRF" collectionClass="NSMutableArray" id="uxy-Km-kjF"/>
+                        <outletCollection property="numberBtns" destination="aQo-YP-bYi" collectionClass="NSMutableArray" id="kv5-H3-1NU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

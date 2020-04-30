@@ -122,6 +122,7 @@ class CalculatorViewController: UIViewController {
         }else{
             claerAll()
         }
+        
     }
     
     // MARK:- Equal to Action
