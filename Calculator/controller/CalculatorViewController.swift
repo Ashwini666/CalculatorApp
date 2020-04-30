@@ -106,7 +106,7 @@ class CalculatorViewController: UIViewController {
         numberLabel.text = runningNumber
         
     }
-    // MARK:- dot btn clicked action
+    // MARK:- dot btn action
 
     @IBAction func dotPressed(_ sender: UIButton) {
         if runningNumber.count <= 7{
@@ -114,6 +114,7 @@ class CalculatorViewController: UIViewController {
             numberLabel.text = runningNumber
         }
     }
+    
     @IBAction func cancel(_ sender: UIButton) {
         numberLabel.text = runningNumber
         if runningNumber.count != 0 {
@@ -122,10 +123,15 @@ class CalculatorViewController: UIViewController {
             claerAll()
         }
     }
+    
+    // MARK:- Equal to Action
+
     @IBAction func equalsToo(_ sender: UIButton) {
         operation(operation: currentOperator)
     }
     
+    // MARK:- Performopertion
+
     @IBAction func operationPerformed(_ sender: UIButton) {
         if sender.tag == 11{ // add opertion
             operation(operation: .Add)
@@ -151,7 +157,7 @@ class CalculatorViewController: UIViewController {
     // MARK:- perform Opertion
     
     func operation (operation : Operation){
-        
+
         if currentOperator != .Empty{
             if runningNumber != ""{
                 rightValue = runningNumber
@@ -164,7 +170,6 @@ class CalculatorViewController: UIViewController {
                     numSecond = right
                 }
                 if currentOperator == .Add{
-                    
                     result =  String(numFirst + numSecond)
 
                 }else if currentOperator == .Substract{

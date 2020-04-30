@@ -103,10 +103,19 @@
 		9254A7AD245AE2AF001B0B6A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E964C6F42406B085006BA738 /* Color.swift */,
 				9254A7AB245AE200001B0B6A /* constant.swift */,
 				9254A7AE245AE2D0001B0B6A /* FontManager.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		9254A7B0245AF1C9001B0B6A /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				E964C6C824068C3F006BA738 /* CalculatorViewController.swift */,
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 		E964C6BA24068C3F006BA738 = {
@@ -132,13 +141,12 @@
 		E964C6C524068C3F006BA738 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				9254A7B0245AF1C9001B0B6A /* controller */,
 				9254A7AD245AE2AF001B0B6A /* Common */,
 				9254A7A8245AD0ED001B0B6A /* extension */,
 				9254A7A5245ACF42001B0B6A /* Model */,
 				E964C6C624068C3F006BA738 /* AppDelegate.swift */,
-				E964C6C824068C3F006BA738 /* CalculatorViewController.swift */,
 				E964C6CA24068C3F006BA738 /* Main.storyboard */,
-				E964C6F42406B085006BA738 /* Color.swift */,
 				E964C6CD24068C42006BA738 /* Assets.xcassets */,
 				E964C6CF24068C42006BA738 /* LaunchScreen.storyboard */,
 				E964C6D224068C42006BA738 /* Info.plist */,
@@ -479,14 +487,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 72L8M8UMF4;
 				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Ashwini.Calculator;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neosoft.neovisitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NeoVisitor_InHouse;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -496,14 +507,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 72L8M8UMF4;
 				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Ashwini.Calculator;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neosoft.neovisitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NeoVisitor_InHouse;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -9,6 +9,7 @@
 import UIKit
 
 extension UIButton{
+    
     func setBtnProperties(bgColor:UIColor,borderColor:UIColor,titleColor:UIColor=UIColor.black){
         self.backgroundColor = bgColor
         self.setTitleColor(UIColor.textColor, for: .normal)
@@ -20,9 +21,10 @@ extension UIButton{
 }
 
 
+//MARK:- Number formattter
 extension NumberFormatter {
+    
      func numFormatter(temp:Double)->String{
-        
         self.groupingSeparator = ","
         self.groupingSize = 3
         self.numberStyle = .decimal
