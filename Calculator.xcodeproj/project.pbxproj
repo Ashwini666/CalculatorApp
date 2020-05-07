@@ -11,6 +11,7 @@
 		9254A7AA245AD10C001B0B6A /* UI+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254A7A9245AD10C001B0B6A /* UI+extension.swift */; };
 		9254A7AC245AE200001B0B6A /* constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254A7AB245AE200001B0B6A /* constant.swift */; };
 		9254A7AF245AE2D0001B0B6A /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254A7AE245AE2D0001B0B6A /* FontManager.swift */; };
+		9254A7B4245B12A0001B0B6A /* response.json in Resources */ = {isa = PBXBuildFile; fileRef = 9254A7B3245B12A0001B0B6A /* response.json */; };
 		E964C6C724068C3F006BA738 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E964C6C624068C3F006BA738 /* AppDelegate.swift */; };
 		E964C6C924068C3F006BA738 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E964C6C824068C3F006BA738 /* CalculatorViewController.swift */; };
 		E964C6CC24068C3F006BA738 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E964C6CA24068C3F006BA738 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		9254A7A9245AD10C001B0B6A /* UI+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI+extension.swift"; sourceTree = "<group>"; };
 		9254A7AB245AE200001B0B6A /* constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constant.swift; sourceTree = "<group>"; };
 		9254A7AE245AE2D0001B0B6A /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		9254A7B3245B12A0001B0B6A /* response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = response.json; sourceTree = "<group>"; };
 		E964C6C324068C3F006BA738 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E964C6C624068C3F006BA738 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E964C6C824068C3F006BA738 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				E964C6C624068C3F006BA738 /* AppDelegate.swift */,
 				E964C6CA24068C3F006BA738 /* Main.storyboard */,
 				E964C6CD24068C42006BA738 /* Assets.xcassets */,
+				9254A7B3245B12A0001B0B6A /* response.json */,
 				E964C6CF24068C42006BA738 /* LaunchScreen.storyboard */,
 				E964C6D224068C42006BA738 /* Info.plist */,
 			);
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E964C6D124068C42006BA738 /* LaunchScreen.storyboard in Resources */,
+				9254A7B4245B12A0001B0B6A /* response.json in Resources */,
 				E964C6CE24068C42006BA738 /* Assets.xcassets in Resources */,
 				E964C6CC24068C3F006BA738 /* Main.storyboard in Resources */,
 			);

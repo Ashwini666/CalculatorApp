@@ -1,0 +1,24 @@
+[
+	"data":  {
+				"feedback":"",
+				"data": [
+						{
+							"checkSide":"FRONT",
+							"imageType":"JPG",
+							"imageData":"/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgQ==",
+							"frontImageUrl":"frontImageUrl",
+							"backImageUrl":"backImageUrl"
+						},
+						{
+							"checkSide":"BACK",
+							"imageType":"JPG",
+							"imageData":"/9j/4AAQSkZJRgABAgAAAQABAAD/CiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKigD//Z",
+							"frontImageUrl":"frontImageUrl",
+							"backImageUrl":"backImageUrl"
+						}
+					],
+				"success":true
+			},
+	"feedback": "",
+	"success": 1
+]

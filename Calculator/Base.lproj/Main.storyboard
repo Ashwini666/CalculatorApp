@@ -35,7 +35,17 @@
                                                 <rect key="frame" x="20" y="40" width="374" height="100"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmG-rk-TR2">
-                                                        <rect key="frame" x="0.0" y="0.0" width="344" height="100"/>
+                                                        <rect key="frame" x="0.0" y="60" width="344" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=compact-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                        </variation>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ug9-zW-yDm">
+                                                        <rect key="frame" x="10" y="10" width="354" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -46,11 +56,15 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="rmG-rk-TR2" firstAttribute="top" secondItem="El3-ix-mdL" secondAttribute="top" id="1qr-Vg-LW8"/>
                                                     <constraint firstItem="rmG-rk-TR2" firstAttribute="leading" secondItem="El3-ix-mdL" secondAttribute="leading" id="2Hr-rY-DTO"/>
+                                                    <constraint firstItem="ug9-zW-yDm" firstAttribute="leading" secondItem="El3-ix-mdL" secondAttribute="leading" constant="10" id="561-FQ-iQw"/>
+                                                    <constraint firstItem="rmG-rk-TR2" firstAttribute="top" secondItem="ug9-zW-yDm" secondAttribute="bottom" constant="10" id="6aR-eM-Zyw"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="UVR-hU-MgY"/>
+                                                    <constraint firstItem="ug9-zW-yDm" firstAttribute="top" secondItem="El3-ix-mdL" secondAttribute="top" constant="10" id="X6j-C1-ywB"/>
                                                     <constraint firstAttribute="bottom" secondItem="rmG-rk-TR2" secondAttribute="bottom" id="YGx-7R-Gcl"/>
                                                     <constraint firstAttribute="trailing" secondItem="rmG-rk-TR2" secondAttribute="trailing" constant="30" id="abz-RW-XqX"/>
+                                                    <constraint firstItem="ug9-zW-yDm" firstAttribute="height" secondItem="rmG-rk-TR2" secondAttribute="height" id="q8f-Rh-9iy"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ug9-zW-yDm" secondAttribute="trailing" constant="10" id="rFp-wz-40D"/>
                                                     <constraint firstAttribute="height" constant="100" id="s3o-sv-FZV"/>
                                                 </constraints>
                                                 <variation key="default">
@@ -290,6 +304,7 @@
                     </view>
                     <connections>
                         <outlet property="display" destination="El3-ix-mdL" id="cXQ-8O-EfB"/>
+                        <outlet property="lblDisplayTxt" destination="ug9-zW-yDm" id="Gmg-8x-AwX"/>
                         <outlet property="myMainView" destination="ZRT-LR-qOG" id="K6K-Bo-6ht"/>
                         <outlet property="myScrollView" destination="bA4-dC-kMM" id="adY-TA-qRt"/>
                         <outlet property="numberLabel" destination="rmG-rk-TR2" id="wDf-Rj-ldk"/>
@@ -317,7 +332,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-162.40000000000001" y="-1081.7091454272863"/>
+            <point key="canvasLocation" x="-163.768115942029" y="-1082.1428571428571"/>
         </scene>
     </scenes>
 </document>

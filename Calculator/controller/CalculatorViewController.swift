@@ -23,6 +23,7 @@ class CalculatorViewController: UIViewController {
     @IBOutlet var operationBtn: [UIButton]!
     @IBOutlet var numberBtns: [UIButton]!
     
+    @IBOutlet weak var lblDisplayTxt: UILabel!
     // MARK:- Properties
     var runningNumber = ""
     var leftValue = ""
@@ -39,10 +40,14 @@ class CalculatorViewController: UIViewController {
         setButtons()
     }
     
+    
+   
+    
     // MARK:- Ui intialise
     
     private func uiSetUp(){
-        numberLabel.text = "0"
+        numberLabel.text = ""
+        lblDisplayTxt.text = ""
         self.navigationItem.title = AppTitle
         let navigationBarAppearance = UINavigationBar.appearance()
         navigationBarAppearance.barTintColor = UIColor.myBrown
@@ -74,11 +79,12 @@ class CalculatorViewController: UIViewController {
     
     private func claerAll(){
         runningNumber = ""
+        lblDisplayTxt.text = ""
         leftValue = ""
         rightValue = ""
         result = ""
         currentOperator = .Empty
-        numberLabel.text = "0"
+        numberLabel.text = ""
     }
     
     // MARK:- Clear All things
@@ -89,13 +95,21 @@ class CalculatorViewController: UIViewController {
     // MARK:- Number clicked action
 
     @IBAction func numberPressed(_ sender: UIButton) {
+         numberLabel.text = ""
         if runningNumber.count <= 8 {
             runningNumber += "\(sender.tag - 1)"
-            numberLabel.text = runningNumber
+            //numberLabel.text = runningNumber
         }
         guard let temp = Double(runningNumber) else {return}
         //Apply num formatter
-        numberLabel.text = NumberFormatter().numFormatter(temp: temp)
+       // numberLabel.text = NumberFormatter().numFormatter(temp: temp)
+        if lblDisplayTxt.text == ""{
+            lblDisplayTxt.text = NumberFormatter().numFormatter(temp: temp)
+            
+        }else{
+            lblDisplayTxt.text! += "\(sender.tag - 1)"
+        }
+
     }
     
     // MARK:- +ve/-ve clicked action
@@ -103,15 +117,17 @@ class CalculatorViewController: UIViewController {
     @IBAction func plusMinusBtn(_ sender: UIButton) {
         guard let temp = Int(runningNumber) else {return}
         runningNumber = "\(temp * (-1))"
-        numberLabel.text = runningNumber
-        
+        //numberLabel.text = runningNumber
+        lblDisplayTxt.text = runningNumber
+
     }
     // MARK:- dot btn action
 
     @IBAction func dotPressed(_ sender: UIButton) {
         if runningNumber.count <= 7{
             runningNumber += "."
-            numberLabel.text = runningNumber
+           // numberLabel.text = runningNumber
+            lblDisplayTxt.text = runningNumber
         }
     }
     
@@ -119,6 +135,7 @@ class CalculatorViewController: UIViewController {
         numberLabel.text = runningNumber
         if runningNumber.count != 0 {
             runningNumber.removeLast()
+
         }else{
             claerAll()
         }
@@ -135,16 +152,28 @@ class CalculatorViewController: UIViewController {
 
     @IBAction func operationPerformed(_ sender: UIButton) {
         if sender.tag == 11{ // add opertion
+
             operation(operation: .Add)
+            lblDisplayTxt.text = "\(leftValue)" + "+"
+            
+
         }
         if sender.tag == 12{ // sub
             operation(operation: .Substract)
+            lblDisplayTxt.text = "\(leftValue)" + "_"
+
         }
         if sender.tag == 14{ // division
+
             operation(operation: .Division)
+            lblDisplayTxt.text = "\(leftValue)" +  "/"
+
         }
         if sender.tag == 13{ // multiply
+
             operation(operation: .Multiply)
+            lblDisplayTxt.text = "\(leftValue)" +  "*"
+
         }
         if sender.tag == 15 {
             numberLabel.text = runningNumber
@@ -153,6 +182,7 @@ class CalculatorViewController: UIViewController {
                 
             }
         }
+        numberLabel.text = ""
     }
     
     // MARK:- perform Opertion
@@ -181,19 +211,24 @@ class CalculatorViewController: UIViewController {
                     
                 }else if currentOperator == .Multiply{
                     result =  String(numFirst * numSecond)
+                }else{
+
                 }
                 
                 leftValue = result
-                numberLabel.text = result
+                numberLabel.text =  "=" + "\(result)"
             }
             currentOperator = operation
             
         }else {
             leftValue = runningNumber
+            
             runningNumber = ""
             currentOperator = operation
         }
     }
+    
+    
 }
 
 
